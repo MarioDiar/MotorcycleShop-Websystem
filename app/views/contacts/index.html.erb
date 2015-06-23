@@ -1,0 +1,33 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Contactos</h3>
+      <p id="notice"><%= notice %></p>
+      <div class="table-responsive">
+        <table id="mytable" class="table table-bordred table-striped">
+         <thead>
+           <th>Nombre</th>
+           <th>Apellido</th>
+           <th>Teléfono</th>
+           <th>Email</th>
+           <th>Mensaje</th>
+         </thead>
+         <tbody>
+          <% @contacts.each do |contact| %>
+          <tr>
+            <td><%= contact.name %></td>
+            <td><%= contact.lastname %></td>
+            <td><%= contact.telephone %></td>
+            <td><%= contact.email %></td>
+            <td><%= contact.message %></td>
+            <td><%= button_to 'Editar', edit_contact_path(contact), :method => "get", class:"btn btn-primary btn-xs"%></td>
+            <td><%= button_to 'Eliminar', contact, method: :delete, data: {confirm: '¿Estás seguro?'} ,class:"btn btn-danger btn-xs"%></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>

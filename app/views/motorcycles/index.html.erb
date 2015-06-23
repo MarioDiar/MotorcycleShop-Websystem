@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Motocicletas guardadas</h3>
+      <p id="notice"><%= notice %></p>
+      <div class="table-responsive">
+        <table id="mytable" class="table table-bordred table-striped">
+         <thead>
+           <th>Modelo</th>
+           <th>Desc. chica</th>
+           <th>Descripción</th>
+           <th>Precio</th>
+         </thead>
+         <tbody>
+          <% @motorcycles.each do |motorcycle| %>
+          <tr>
+            <td><%= motorcycle.model %></td>
+            <td><%= motorcycle.descriptionshort %></td>
+            <td><%= motorcycle.descriptionbig %></td>
+            <td><%= motorcycle.price %></td>
+            <td><%= button_to 'Editar', edit_motorcycle_path(motorcycle), :method => "get", class:"btn btn-primary btn-xs"%></td>
+            <td><%= button_to 'Ver', motorcycle_path(motorcycle), :method => "get", class:"btn btn-success btn-xs"%></td>
+            <td><%= button_to 'Eliminar', motorcycle, method: :delete, data: {confirm: '¿Estás seguro?'} ,class:"btn btn-danger btn-xs"%></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>

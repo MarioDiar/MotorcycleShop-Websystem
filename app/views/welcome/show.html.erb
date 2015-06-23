@@ -1,0 +1,38 @@
+<div class="container margintop-large">
+  <div class="row">
+  	<div class="col-md-12 hidden-xs">
+  			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  				<ol class="carousel-indicators">
+  					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+  					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+  					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  				</ol>
+  				<div class="carousel-inner">
+  					<div class="item active">
+  					<%= image_tag @motorcycle.image.url(:medium) %>
+  					</div>
+  					<div class="item">
+  						<%= image_tag @motorcycle.imagetwo.url(:medium) %>
+  					</div>
+  					<div class="item">
+  						<%= image_tag @motorcycle.imagethree.url(:medium) %>
+  					</div>
+  				</div>
+  				<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+  					<span class="glyphicon glyphicon-chevron-left"></span>
+  				</a>
+  				<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+  					<span class="glyphicon glyphicon-chevron-right"></span>
+  				</a>
+  			</div>
+    </div>
+    <div class="col-md-12">
+      <h2 class="center"><%= @motorcycle.model%> | <%= @motorcycle.price%></h2>
+      <hr>
+      <address class="texto-med">
+        <%= @motorcycle.descriptionbig%>
+      </address>
+    </div>
+  </div>
+</div>
+<%= render "partials/footer"%>

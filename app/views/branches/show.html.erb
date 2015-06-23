@@ -1,0 +1,19 @@
+
+<div class="container margintop-large">
+  <div class="row">
+    <div class="col-md-8">
+      <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src=<%= @map.html_safe %>></iframe>
+    </div>
+    <div class="col-md-4">
+      <h2 class="center">Sucursal <%= @branch.city%></h2>
+      <hr>
+      <address>
+        <%= @branch.street%> |
+        <%= @branch.colony%> |
+        <%= @branch.postalCode%> |        
+        <abbr title="Phone">Tel:</abbr><%= @branch.telephone%> |
+        <abbr title="Email">Email:</abbr><%= @branch.email%> 
+      </address>
+    </div>
+  </div>
+</div>

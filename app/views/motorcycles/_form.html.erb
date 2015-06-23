@@ -1,0 +1,37 @@
+<%= form_for(@motorcycle, multipart: true) do |f| %>
+
+<% if @motorcycle.errors.any? %>
+<div class="gray">
+  <ul>
+    <% @motorcycle.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<div class="field">
+  <%= f.text_field :model, placeholder: "Modelo", class:"form-custom"  %>
+</div>
+<div class="field">
+  Imagen: <%= f.file_field :image %>
+</div>
+<div class="field">
+  Imagen cover 2: <%= f.file_field :imagetwo %>
+</div>
+<div class="field">
+  Imagen cover 3: <%= f.file_field :imagethree %>
+</div>
+<div class="field">
+  <%= f.text_area :descriptionshort, placeholder: "Descripción breve (máximo 120 carácteres)", style:"height:100px", class:"form-custom" %>
+</div>
+<div class="field">
+  <%= f.text_area :descriptionbig, placeholder: "Descripción completa", style:"height:250px", class:"form-custom" %>
+</div>
+<div class="field">
+  <%= f.text_field :price, placeholder: "Precio", class:"form-custom" %>
+</div>
+<div class="actions">
+  <%= f.submit "Guardar", class:"btnadmin be-yellow gray"%>
+</div>
+<% end %>

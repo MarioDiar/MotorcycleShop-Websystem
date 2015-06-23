@@ -1,0 +1,24 @@
+<%= form_for(@cover) do |f| %>
+  <% if @cover.errors.any? %>
+    <div class="gray">
+  <ul>
+    <% @cover.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+  <% end %>
+
+  <div class="field">
+    <%= f.text_field :name, placeholder: "Nombre de la imagen", class:"form-custom" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :description, placeholder: "Descripción", class:"form-custom" %>
+  </div>
+  <div class="field">
+    Imagen: <%= f.file_field :image %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Guardar", class:"btnadmin be-yellow gray" %>
+  </div>
+<% end %>

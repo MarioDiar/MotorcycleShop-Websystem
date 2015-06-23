@@ -1,0 +1,36 @@
+<%= form_for(@branch) do |f| %>
+  <% if @branch.errors.any? %>
+    <div class="gray">
+  <ul>
+    <% @branch.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+  <% end %>
+
+  <div class="field">
+    <%= f.text_field :city, placeholder: "Ciudad", class:"form-custom" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :state, placeholder: "Estado", class:"form-custom" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :postalCode, placeholder: "Código Postal", class:"form-custom" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :colony, placeholder: "Colonia", class:"form-custom" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :street, placeholder: "Calle", class:"form-custom" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :telephone, placeholder: "Teléfono", class:"form-custom" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :email, placeholder: "Email", class:"form-custom" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Guardar", class:"btnadmin be-yellow gray" %>
+  </div>
+<% end %>

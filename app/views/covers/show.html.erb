@@ -1,0 +1,31 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-6 col-xs-offset-3 center">
+			<div class="thumbnail" >
+				<h4 class="text-center"><span class="label label-info">Cover</span></h4>
+				<%= image_tag @cover.image.url(:small) %>
+				<div class="caption">
+					<div class="row">
+						<div class="col-md-6 col-xs-6">
+							<h3><%= @cover.name %></h3>
+						</div>
+						<div class="col-md-6 col-xs-6 price">
+						</div>
+					</div>
+						<p><%= @cover.description %></p>
+					<div class="row">
+						<div class="col-md-6">
+							<%= link_to 'Editar', edit_cover_path(@cover),class:"btn btn-primary" %>
+						</div>
+						<div class="col-md-6">
+								<%= link_to 'Ver Covers', covers_path,class:"btn btn-success" %>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-3">
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,18 @@
+<div class="social">
+  <div class="col-xs-6 socialcenter">
+    <p class="linkcalloutsmall margintop">Búscanos en el mapa:</p>
+    <% @addresses.each do |address|%>
+    <input type="button" class="btn btn-xtag btn-amarilloinv" value=<%=address%> onclick="codeAddress(this)"/>
+    <%end%>
+  </div>
+  <div class="col-xs-6 socialcenter">
+    <p class="linkcalloutsmall margintop">!Conoce las Bajaj!</p>
+    <% @motorcycles.each do |motorcycle|%>
+    <a href="/motos" class="btn btn-xtag btn-amarilloinv"><%= motorcycle.model %></a>
+    <%end%>
+  </div>
+</div>
+
+<div id="map">
+  
+</div>

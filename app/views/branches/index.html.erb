@@ -1,0 +1,37 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Sucursales guardadas</h3>
+      <p id="notice"><%= notice %></p>
+      <div class="table-responsive">
+        <table id="mytable" class="table table-bordred table-striped">
+         <thead>
+           <th>Ciudad</th>
+           <th>C.Postal</th>
+           <th>Colonia</th>
+           <th>Calle</th>
+           <th>Tel.</th>
+           <th>Email</th>
+         </thead>
+         <tbody>
+          <% @branches.each do |branch| %>
+          <tr>
+            <td><%= branch.city %></td>
+            <td><%= branch.postalCode %></td>
+            <td><%= branch.colony %></td>
+            <td><%= branch.street %></td>
+            <td><%= branch.telephone %></td>
+            <td><%= branch.email %></td>
+            <td><%= button_to 'Editar', edit_branch_path(branch), :method => "get", class:"btn btn-primary btn-xs"%></td>
+            <td><%= button_to 'Ver', branch_path(branch), :method => "get", class:"btn btn-success btn-xs"%></td>
+            <td><%= button_to 'Eliminar', branch, method: :delete, data: {confirm: '¿Estás seguro?'} ,class:"btn btn-danger btn-xs"%></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+

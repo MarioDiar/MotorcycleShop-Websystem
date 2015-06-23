@@ -1,0 +1,31 @@
+<%= form_for(@contact) do |f| %>
+
+<% if @contact.errors.any? %>
+<div class="gray">
+  <ul>
+    <% @contact.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<div class="field">
+  <%= f.text_field :name, placeholder: "Nombre", class:"form-custom"  %>
+</div>
+<div class="field">
+  <%= f.text_field :lastname, placeholder: "Apellido", class:"form-custom" %>
+</div>
+<div class="field">
+  <%= f.text_field :email, placeholder: "Email", class:"form-custom" %>
+</div>
+<div class="field">
+  <%= f.text_field :telephone, placeholder: "Teléfono", class:"form-custom" %>
+</div>
+<div class="field">
+  <%= f.text_area :message, placeholder: "Escribe aquí lo que nos quieres decir", style:"height:250px", class:"form-custom" %>
+</div>
+<div class="actions">
+  <%= f.submit "Guardar", class:"btnadmin be-yellow gray"%>
+</div>
+<% end %>

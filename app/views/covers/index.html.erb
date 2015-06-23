@@ -1,0 +1,28 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Covers guardados</h3>
+      <p id="notice"><%= notice %></p>
+      <div class="table-responsive">
+        <table id="mytable" class="table table-bordred table-striped">
+         <thead>
+           <th>Nombre</th>
+           <th>Descripción</th>
+         </thead>
+         <tbody>
+          <% @covers.each do |cover| %>
+          <tr>
+            <td><%= cover.name %></td>
+            <td><%= cover.description %></td>
+            <td><%= button_to 'Editar', edit_cover_path(cover), :method => "get", class:"btn btn-primary btn-xs"%></td>
+            <td><%= button_to 'Ver', cover_path(cover), :method => "get", class:"btn btn-success btn-xs"%></td>
+            <td><%= button_to 'Eliminar', cover, method: :delete, data: {confirm: '¿Estás seguro?'} ,class:"btn btn-danger btn-xs"%></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
