@@ -1,3 +1,4 @@
+#Migration that modifies the motorcycle model, removing description and adding a small and big description
 class AddShortdescriptionToMotorcycles < ActiveRecord::Migration
   def change
   	remove_column :motorcycles, :description, :text

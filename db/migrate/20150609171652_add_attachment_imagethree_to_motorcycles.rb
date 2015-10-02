@@ -1,3 +1,4 @@
+#Migration to save the image (link) of the motorcycle model in the database
 class AddAttachmentImagethreeToMotorcycles < ActiveRecord::Migration
   def self.up
     change_table :motorcycles do |t|

@@ -1,3 +1,4 @@
+#Migration to create the branches model in the database
 class CreateBranches < ActiveRecord::Migration
   def change
     create_table :branches do |t|

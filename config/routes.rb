@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :articles
+
   resources :contacts, except: :new
 
   resources :covers

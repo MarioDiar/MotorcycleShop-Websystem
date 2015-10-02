@@ -1,3 +1,4 @@
+#Migration to create the motorcycle model in the database
 class CreateMotorcycles < ActiveRecord::Migration
   def change
     create_table :motorcycles do |t|

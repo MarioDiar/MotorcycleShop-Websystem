@@ -1,5 +1,7 @@
 class CoversController < ApplicationController
+  #defining the dashboard as the layout for this controller
   layout "dashboard"
+  #calling methods before actions, also making sure that an admin is using the controller
   before_action :set_cover, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_admin!
 

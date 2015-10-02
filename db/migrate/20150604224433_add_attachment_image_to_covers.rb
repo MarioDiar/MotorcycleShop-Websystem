@@ -1,3 +1,4 @@
+#Migration to save the image (link) of the cover
 class AddAttachmentImageToCovers < ActiveRecord::Migration
   def self.up
     change_table :covers do |t|

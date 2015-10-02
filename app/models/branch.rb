@@ -1,4 +1,5 @@
 class Branch < ActiveRecord::Base
+	#validations for branches
 	validates :city, presence: true
 	validates :street, presence: true
 	validates :postalCode, presence: true

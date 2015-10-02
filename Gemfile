@@ -1,8 +1,10 @@
 source 'https://rubygems.org'
 
-ruby "2.1.5"
+ruby "2.2.3"
 #devise autenticacion de usuario
 gem 'devise'
+#sqlite3 development database
+gem 'sqlite3'
 #Paperclip - subir imagenes
 gem 'paperclip'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

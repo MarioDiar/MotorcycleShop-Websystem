@@ -1,5 +1,7 @@
 class MotorcyclesController < ApplicationController
+  #defining the dashboard as the layout for this controller
   layout "dashboard"
+  #calling methods before any action
   before_action :set_motorcycle, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_admin!, except: [:show]
   
@@ -63,13 +65,16 @@ class MotorcyclesController < ApplicationController
     end
   end
 
+#private methods
+
   private
+    #method that sets motorcycle depending on the parameters given
     def set_motorcycle
       @motorcycle = Motorcycle.find(params[:id])
     end
 
+    #defining the parameters neccesary for the motorcycle
     def motorcycle_params
-      params.require(:motorcycle).permit(:model, :descriptionshort, :descriptionbig,
-                                         :price, :image,:imagetwo,:imagethree)
+      params.require(:motorcycle).permit(:model, :image, :imagetwo, :imagethree, :descriptionshort, :descriptionbig, :price)
     end
 end

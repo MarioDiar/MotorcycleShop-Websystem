@@ -1,3 +1,4 @@
+#Migration to create the admin in the database
 class DeviseCreateAdmins < ActiveRecord::Migration
   def change
     create_table(:admins) do |t|

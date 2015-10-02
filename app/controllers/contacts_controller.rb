@@ -1,5 +1,7 @@
 class ContactsController < ApplicationController
+  #defining the dashboard as the layout for this controller
   layout "dashboard"
+  #calling methods before any action, to set contacts and make sure it is an admin
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_admin!, except: :create
 

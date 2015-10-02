@@ -1,4 +1,5 @@
 class WelcomeController < ApplicationController
+	#call the private methods before any action
 	before_action :getAddresses
 	before_action :getMotorcycles
 
@@ -10,7 +11,7 @@ class WelcomeController < ApplicationController
 		@motorcycle = @motorcycle = Motorcycle.find(params[:id])
 	end
 
-	#agencias
+	#Method to display each branch in the googles map of the main page
 	def agencias
 		@branches = Branch.all
 		map = 'https://maps.google.com.mx/maps?f=q&source=s_q&hl=en&geocode=&q='
@@ -37,12 +38,15 @@ class WelcomeController < ApplicationController
 		@contact = Contact.new
 	end
 
+	#private methods
 	private
 
+	#get the data of all the motorcycles
 	def getMotorcycles
 		@motorcycles = Motorcycle.all
 	end
 
+	#get the addresses of the branches
 	def getAddresses
 		@addresses = []
 		branches = Branch.all
