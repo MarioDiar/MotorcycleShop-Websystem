@@ -33,6 +33,10 @@ class WelcomeController < ApplicationController
 	def motos
 	end
 
+	#articulos
+	def articulos
+	end
+
 	#contact
 	def contacto
 		@contact = Contact.new
