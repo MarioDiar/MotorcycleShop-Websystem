@@ -1,6 +1,10 @@
-<h1>Editing Article</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @article %> |
-<%= link_to 'Back', articles_path %>
+<!-- Branches edit page -->
+<div class="container">
+	<div class="row">
+		<div class="col-xs-8 col-xs-offset-2">
+			<h2>Editando <%=@article.title%></h2>
+			<%= render "form", {name: "Editar"}%>
+		</div>
+		<div class="col-xs-2"></div>
+	</div>
+</div>
