@@ -282,9 +282,10 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
   font-size: 1em;
 }
 
-/*PRUEBAS*/
+/*Left Header*/
 
-.prueba {
+.left_header {
+  padding: 0px;
   color: #fff;
   background: black;
   height: 100px;
@@ -292,28 +293,26 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
 }
 
 @media (min-width: 768px) {
-  .prueba {
+  .left_header {
     height: 100%;
     position: fixed;
   }
 }
 
-@media (min-width: 1330px) {
-  .prueba {
-    height: 100%;
-    position: fixed;
-  }
-}
- 
-.prueba {
-  color: #ffffff;
-  background: black; 
+/*list*/
+
+.right_content {
+  padding: 0px;
 }
 
-.pruebados {
-
+.list {
+  background: white;
+  height: 200px;
+  width: 100%;
+  border-bottom-width: 2px;
+  border-bottom-color: gray;
+  border-bottom-style: solid;
 }
-
 
 /*CALLOUT*/
 .callout {
