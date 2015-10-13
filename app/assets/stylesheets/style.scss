@@ -282,6 +282,38 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
   font-size: 1em;
 }
 
+/*PRUEBAS*/
+
+.prueba {
+  color: #fff;
+  background: black;
+  height: 100px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .prueba {
+    height: 100%;
+    position: fixed;
+  }
+}
+
+@media (min-width: 1330px) {
+  .prueba {
+    height: 100%;
+    position: fixed;
+  }
+}
+ 
+.prueba {
+  color: #ffffff;
+  background: black; 
+}
+
+.pruebados {
+
+}
+
 
 /*CALLOUT*/
 .callout {

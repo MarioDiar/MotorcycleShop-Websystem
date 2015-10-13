@@ -7,7 +7,8 @@ Rails.application.routes.draw do
 
   #route to dashboard main menu
   get "/dashboard", to: "dashboard#menu"
-
+  #route to noticas
+  get "/noticias", to: "welcome#noticias"
   #route to motorcycles in the main page
   get "/motos", to: "welcome#motos"
   #route to branches in the main page
