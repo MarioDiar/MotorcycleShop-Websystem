@@ -17,6 +17,9 @@
   Imagen Cover: <%= f.file_field :cover %>
   </div>
   <div class="field">
+    <%= f.text_field :brief, placeholder: "Resumen de la noticia.", class:"form-custom" %>
+  </div>
+  <div class="field">
     <%= f.text_area :body, placeholder: "Cuerpo", class:"form-custom" %>
   </div>
   <div class="actions">

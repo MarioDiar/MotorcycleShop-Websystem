@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151014184046) do
+ActiveRecord::Schema.define(version: 20151014185237) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -35,13 +35,14 @@ ActiveRecord::Schema.define(version: 20151014184046) do
     t.string   "title"
     t.text     "body"
     t.integer  "visits_count"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
     t.string   "cover_file_name"
     t.string   "cover_content_type"
     t.integer  "cover_file_size"
     t.datetime "cover_updated_at"
     t.string   "brief"
+    t.string   "state",              default: "in_draft"
   end
 
   create_table "branches", force: :cascade do |t|

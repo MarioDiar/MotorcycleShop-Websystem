@@ -28,7 +28,8 @@ gem 'coffee-script-source', '1.8.0'
 # gem 'therubyracer', platforms: :ruby
 #foreiner gem to add foreign keys
 gem 'foreigner'
-
+# state machines gem
+gem 'aasm'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

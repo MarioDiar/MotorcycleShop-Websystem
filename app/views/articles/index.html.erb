@@ -14,7 +14,7 @@
           <% @articles.each do |article| %>
           <tr>
             <td><%= article.title %></td>
-            <td><%= article.body %></td>
+            <td><%= article.brief %></td>
             <td><%= button_to 'Editar', edit_article_path(article), :method => "get", class:"btn btn-primary btn-xs"%></td>
             <td><%= button_to 'Ver', article_path(article), :method => "get", class:"btn btn-success btn-xs"%></td>
             <td><%= button_to 'Eliminar', article, method: :delete, data: {confirm: '¿Estás seguro?'} ,class:"btn btn-danger btn-xs"%></td>
