@@ -1,9 +1,17 @@
 Rails.application.routes.draw do
+
+  #default route
+  root 'welcome#index'
+
+  # CRUD FOR THE MODELS
   resources :articles
-
   resources :contacts, except: :new
-
   resources :covers
+  resources :branches
+  resources :motorcycles
+
+  # CRUD for admins with security
+  devise_for :admins
 
   #route to dashboard main menu
   get "/dashboard", to: "dashboard#menu"
@@ -18,18 +26,10 @@ Rails.application.routes.draw do
   #route to show each motorcycle
   get "/moto/:id", to: "welcome#show", as: "moto"
 
+  # publish articles
+  put "/articles/:id/publish", to: "articles#publish"
 
-  #CRUD for covers
-  #CRUD for branches
-  resources :branches
-
-  #CRUD for motorcycles
-  resources :motorcycles
-    #authentication for admin via devise
-  devise_for :admins
-
-  #default route
-  root 'welcome#index'
+  
 
   #CRUD ROUTES of models
   #get "/models" index

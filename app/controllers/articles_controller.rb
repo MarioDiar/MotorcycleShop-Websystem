@@ -3,12 +3,12 @@ class ArticlesController < ApplicationController
   layout "dashboard"
   #calling methods before any action
   before_action :authenticate_admin!
-  before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :set_article, only: [:show, :edit, :update, :destroy, :publish]
 
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.publicados.ultimos
+    @articles = Article.all
   end
 
   # GET /articles/1
@@ -66,6 +66,12 @@ class ArticlesController < ApplicationController
     end
   end
 
+  # method to publish the article
+  def publish
+    @article.publish!
+    redirect_to @article
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_article
@@ -74,6 +80,6 @@ class ArticlesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit(:title, :body, :cover)
+      params.require(:article).permit(:title, :body, :cover, :brief)
     end
 end

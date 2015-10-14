@@ -36,7 +36,7 @@ class WelcomeController < ApplicationController
 
 	#noticias
 	def noticias
-		@noticias = Article.all
+		@noticias = Article.publicados.ultimos
 	end
 
 	#contact

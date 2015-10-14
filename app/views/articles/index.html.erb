@@ -1,28 +1,53 @@
-<!-- Branches index page (shows all branches) -->
 <div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <h3>Articulos guardadas</h3>
-      <p id="notice"><%= notice %></p>
-      <div class="table-responsive">
-        <table id="mytable" class="table table-bordred table-striped">
-         <thead>
-           <th>Titulo</th>
-           <th>Texto</th>
-         </thead>
-         <tbody>
-          <% @articles.each do |article| %>
-          <tr>
-            <td><%= article.title %></td>
-            <td><%= article.brief %></td>
-            <td><%= button_to 'Editar', edit_article_path(article), :method => "get", class:"btn btn-primary btn-xs"%></td>
-            <td><%= button_to 'Ver', article_path(article), :method => "get", class:"btn btn-success btn-xs"%></td>
-            <td><%= button_to 'Eliminar', article, method: :delete, data: {confirm: '¿Estás seguro?'} ,class:"btn btn-danger btn-xs"%></td>
-          </tr>
-          <% end %>
-        </tbody>
-      </table>
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Articulos en DRAFT</h3>
+            <div class="table-responsive">
+                <table id="mytable" class="table table-bordred table-striped">
+                    <thead>
+                        <th>Titulo</th>
+                        <th>Resumen</th>
+                    </thead>
+                    <tbody>
+                    <% @articles.each do |article|%>
+                        <% if article.may_publish?%>
+                        <tr>
+                            <td><%= article.title %></td>
+                            <td><%= article.brief %></td>
+                            <td><%= button_to 'Editar', edit_article_path(article), :method => "get", class:"btn btn-primary btn-xs"%></td>
+                            <td><%= button_to 'Ver', article_path(article), :method => "get", class:"btn btn-success btn-xs"%></td>
+                            <td><%= button_to 'Eliminar', article, method: :delete, data: {confirm: '¿Estás seguro?'} ,class:"btn btn-danger btn-xs"%></td>
+                        </tr>
+                        <%end%>
+                    <%end%>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="col-sm-12">
+            <h3>Articulos PUBLICADOS</h3>
+            <div class="table-responsive">
+                <table id="mytable" class="table table-bordred table-striped">
+                    <thead>
+                        <th>Titulo</th>
+                        <th>Resumen</th>
+                    </thead>
+                    <tbody>
+                    <% @articles.each do |article|%>
+                        <% if article.may_publish? == false %>
+                        <tr>
+                            <td><%= article.title %></td>
+                            <td><%= article.brief %></td>
+                            <td><%= button_to 'Editar', edit_article_path(article), :method => "get", class:"btn btn-primary btn-xs"%></td>
+                            <td><%= button_to 'Ver', article_path(article), :method => "get", class:"btn btn-success btn-xs"%></td>
+                            <td><%= button_to 'Eliminar', article, method: :delete, data: {confirm: '¿Estás seguro?'} ,class:"btn btn-danger btn-xs"%></td>
+                        </tr>
+                        <%end%>
+                    <%end%>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 </div>
