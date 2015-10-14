@@ -287,13 +287,13 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
 .left_header {
   padding: 0px;
   color: #fff;
-  background: black;
+  background: image-url(ns200grayvertical);
   height: 100px;
   position: relative;
 }
 
 .left_header:hover {
-  background: gray;
+  opacity: 0.9;
 }
 
 @media (min-width: 768px) {
@@ -313,8 +313,9 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
   margin-left: 15px;
   margin-top: 33px;
   overflow: hidden;
-  border-color: gray;
+  border-color: #12539f;
   border-style: solid;
+  border-width: 2px;
   -webkit-border-radius:50%;
 }
 
@@ -341,12 +342,16 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
   padding: 0px;
 }
 
+.right_content >a {
+  color: inherit;
+}
+
 .list {
-  background: white;
+  background: #f6f6f6;
   height: 200px;
   width: 100%;
-  border-bottom-width: 2px;
-  border-bottom-color: gray;
+  border-bottom-width: 1px;
+  border-bottom-color: #e5e5e5;
   border-bottom-style: solid;
 }
 
@@ -355,7 +360,7 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
 }
 
 .list:hover {
-  background: gray;
+  background: white;
 }
 
 .titulo_articulo {
