@@ -303,22 +303,36 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
   }
 }
 
+
+
 /*THUMBNAILS IMAGES*/
+
 .thumbnail_container {
-  margin-top: 20px;
+  width: 130px;
+  height: 130px;
+  margin-left: 15px;
+  margin-top: 33px;
+  overflow: hidden;
+  border-color: gray;
+  border-style: solid;
+  -webkit-border-radius:50%;
 }
 
-.thumbnail {
-  height: 150px;
-  text-align: center;
-  width: 150px;
-  display: table-cell;
-  overflow: hidden;
-  vertical-align: middle;
+.thumbnail_container >img {
+  height: 125px;
+  width: 125px;
+}
 
-  -webkit-border-radius:50%;
-  -moz-border-radius:50%;
-  border-radius: 50%;
+/*@media(min-width: 768px) {
+  .thumbnail_container {
+    margin-left: 40px;
+  }
+}
+*/
+@media (min-width: 979px) {
+  .thumbnail_container {
+    margin-left: 50px;
+  }
 }
 
 /*LISTS*/
