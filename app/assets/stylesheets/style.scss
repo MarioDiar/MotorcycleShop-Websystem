@@ -282,7 +282,7 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
   font-size: 1em;
 }
 
-/*Left Header*/
+/*LEFT HEADER*/
 
 .left_header {
   padding: 0px;
@@ -292,6 +292,10 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
   position: relative;
 }
 
+.left_header:hover {
+  background: gray;
+}
+
 @media (min-width: 768px) {
   .left_header {
     height: 100%;
@@ -299,7 +303,25 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
   }
 }
 
-/*list*/
+/*THUMBNAILS IMAGES*/
+.thumbnail_container {
+  margin-top: 20px;
+}
+
+.thumbnail {
+  height: 150px;
+  text-align: center;
+  width: 150px;
+  display: table-cell;
+  overflow: hidden;
+  vertical-align: middle;
+
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  border-radius: 50%;
+}
+
+/*LISTS*/
 
 .right_content {
   padding: 0px;
@@ -314,7 +336,25 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
   border-bottom-style: solid;
 }
 
-/*CALLOUT*/
+.list >a {
+  padding: 100px;
+}
+
+.list:hover {
+  background: gray;
+}
+
+.titulo_articulo {
+  margin-top: 40px;
+  position: relative;
+}
+
+.resumen_articulo {
+  position: relative;
+  margin-top: 20px;
+}
+
+/*CALLOUT PAGINA PRINCIPAL*/
 .callout {
   color: #ffffff;
   display: table;
