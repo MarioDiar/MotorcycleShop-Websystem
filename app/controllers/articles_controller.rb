@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   layout "dashboard"
   #calling methods before any action
   before_action :authenticate_admin!
-  before_action :set_article, only: [:show, :edit, :update, :destroy, :publish]
+  before_action :set_article, only: [:show, :edit, :update, :destroy, :publish, :unpublish]
 
   # GET /articles
   # GET /articles.json
@@ -69,6 +69,11 @@ class ArticlesController < ApplicationController
   # method to publish the article
   def publish
     @article.publish!
+    redirect_to @article
+  end
+  # method to unpublish the article
+  def unpublish
+    @article.unpublish!
     redirect_to @article
   end
 

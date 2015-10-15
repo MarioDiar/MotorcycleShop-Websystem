@@ -13,9 +13,9 @@
                         <% if article.may_publish?%>
                         <tr>
                             <td><%= article.title %></td>
-                            <td><%= article.brief %></td>
                             <td><%= button_to 'Editar', edit_article_path(article), :method => "get", class:"btn btn-primary btn-xs"%></td>
                             <td><%= button_to 'Ver', article_path(article), :method => "get", class:"btn btn-success btn-xs"%></td>
+                            <td><%= button_to 'Publicar', "/articles/#{article.id}/publish", class:"btn btn-info btn-xs", method: :put%></td>
                             <td><%= button_to 'Eliminar', article, method: :delete, data: {confirm: '¿Estás seguro?'} ,class:"btn btn-danger btn-xs"%></td>
                         </tr>
                         <%end%>
@@ -38,9 +38,9 @@
                         <% if article.may_publish? == false %>
                         <tr>
                             <td><%= article.title %></td>
-                            <td><%= article.brief %></td>
                             <td><%= button_to 'Editar', edit_article_path(article), :method => "get", class:"btn btn-primary btn-xs"%></td>
                             <td><%= button_to 'Ver', article_path(article), :method => "get", class:"btn btn-success btn-xs"%></td>
+                            <td><%= button_to 'Despublicar', "/articles/#{article.id}/unpublish", class:"btn btn-info btn-xs", method: :put%></td>
                             <td><%= button_to 'Eliminar', article, method: :delete, data: {confirm: '¿Estás seguro?'} ,class:"btn btn-danger btn-xs"%></td>
                         </tr>
                         <%end%>

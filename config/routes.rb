@@ -3,8 +3,13 @@ Rails.application.routes.draw do
   #default route
   root 'welcome#index'
 
+  # publish articles
+  put "/articles/:id/publish", to: "articles#publish"
+  # unpublish articles
+  put "/articles/:id/unpublish", to: "articles#unpublish"
   # CRUD FOR THE MODELS
   resources :articles
+
   resources :contacts, except: :new
   resources :covers
   resources :branches
@@ -26,8 +31,7 @@ Rails.application.routes.draw do
   #route to show each motorcycle
   get "/moto/:id", to: "welcome#show", as: "moto"
 
-  # publish articles
-  put "/articles/:id/publish", to: "articles#publish"
+
 
   
 
