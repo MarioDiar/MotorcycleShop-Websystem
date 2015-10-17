@@ -5,6 +5,8 @@ ruby "2.2.3"
 gem 'devise'
 #sqlite3 development database
 gem 'sqlite3'
+# markup editor gem
+gem 'epic-editor-rails'
 #Paperclip - subir imagenes
 gem 'paperclip'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -12,6 +14,8 @@ gem 'rails', '4.2.0'
 # Use postgres as the database for Active Record
 # gem 'postgresql'
 gem 'pg'
+# clean html NOTE: need to install nokogiri
+gem 'sanitize'
 #aws sdk
 gem 'aws-sdk', '< 2.0'
 #turbolinks

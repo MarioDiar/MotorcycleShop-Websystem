@@ -10,7 +10,7 @@
 </p>
 <p>
   <strong>Body:</strong>
-  <%= @article.body %>
+ <%= Sanitize.fragment(@article.body, Sanitize::Config::RELAXED).html_safe %>
 </p>
 <p>
   <strong>Visits count:</strong>

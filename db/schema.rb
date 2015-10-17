@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151014185237) do
+ActiveRecord::Schema.define(version: 20151015204748) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20151014185237) do
     t.datetime "cover_updated_at"
     t.string   "brief"
     t.string   "state",              default: "in_draft"
+    t.text     "markup_body"
   end
 
   create_table "branches", force: :cascade do |t|

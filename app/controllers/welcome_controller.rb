@@ -9,7 +9,11 @@ class WelcomeController < ApplicationController
 	end
 
 	def show
-		@motorcycle = @motorcycle = Motorcycle.find(params[:id])
+		@motorcycle = Motorcycle.find(params[:id])
+	end
+
+	def noticia
+		@noticia = Article.find(params[:id])
 	end
 
 	#Method to display each branch in the googles map of the main page

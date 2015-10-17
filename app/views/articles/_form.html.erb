@@ -1,5 +1,5 @@
 <!-- Form partial for articles -->
-<%= form_for(@article) do |f| %>
+<%= form_for(@article,html: { id: "articles_form"}) do |f| %>
   <% if @article.errors.any? %>
     <div class="gray">
   <ul>
@@ -20,9 +20,27 @@
     <%= f.text_field :brief, placeholder: "Resumen de la noticia.", class:"form-custom" %>
   </div>
   <div class="field">
-    <%= f.text_area :body, placeholder: "Cuerpo", class:"form-custom" %>
+    <%= f.hidden_field :body, id:"body_textarea"%>
+    <%= f.hidden_field :markup_body, id:"markupbody_textarea"%>
+    <div id="epiceditor" style="height:350px"></div>
   </div>
   <div class="actions">
     <%= f.submit "Guardar", class:"btnadmin be-yellow gray" %>
   </div>
 <% end %>
+
+<script type="text/javascript">
+
+var editor = new EpicEditor({
+  textarea: "markupbody_textarea",
+  file:{
+    name:"nuevo_articulo"
+  }
+}).load();
+
+$("#articles_form").on("submit",function(){
+  $("#body_textarea").val( editor.exportFile("nuevo_articulo","html"));
+  $("#markupbody_textarea").val( editor.exportFile("nuevo_articulo"));
+});
+
+</script>

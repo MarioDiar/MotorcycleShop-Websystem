@@ -30,10 +30,9 @@ Rails.application.routes.draw do
   get "/contacto", to: "welcome#contacto"
   #route to show each motorcycle
   get "/moto/:id", to: "welcome#show", as: "moto"
+  # route to show each article
+  get "/noticia/:id", to: "welcome#noticia", as: "noticia"
 
-
-
-  
 
   #CRUD ROUTES of models
   #get "/models" index
