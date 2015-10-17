@@ -17,12 +17,13 @@ src: local('Helvetica Neue LT Std 45 Light'), url('HelveticaNeueLTStd Lt.woff') 
 }
 
 .font_grande {
-  font-size: 72px;
+  font-size: 72px !important;
 }
 
 .font_mediana {
   font-size: 30px;
 }
+
 /*GENERAL*/
 html,body {
     width: 100%;
@@ -37,9 +38,11 @@ html,body {
   height: 350px;
 }
 
-hr { display: block; height: 1px;
-    border: 0; border-top: 1px solid #FCD68A;
-    margin: 1em 0; padding: 0; }
+hr { 
+  display: block; height: 1px;
+  border: 0; border-top: 1px solid #FCD68A;
+  margin: 1em 0; padding: 0; 
+}
 
 .centered {
   float: none;
@@ -326,8 +329,6 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
   }
 }
 
-
-
 /*THUMBNAILS IMAGES*/
 
 .thumbnail_container {
@@ -378,6 +379,14 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
   border-bottom-style: solid;
 }
 
+.datos_moto {
+  height: 100px;
+  width: 100%;
+  border-bottom-width: 1px;
+  border-bottom-color: #e5e5e5;
+  border-bottom-style: solid;
+}
+
 .list >a {
   padding: 100px;
 }
@@ -386,20 +395,27 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
   background: white;
 }
 
-.articulo {
-
-}
-
 /*NOTICIA Y ARTICULO*/
 
 .titulo_articulo {
-  margin-top: 40px;
+  margin-top: 20px;
   position: relative;
 }
+
+.font_titulo {
+  font-family: 'Franklin Gothic Demi Cond';
+  font-size: 40px;
+}
+
 
 .resumen_articulo {
   position: relative;
   margin-top: 20px;
+}
+
+.resumen_articulo >p {
+  font-family: 'Helvetica Neue';
+  font-size: 20px;
 }
 
 .cuerpo_noticia >p {
@@ -419,9 +435,7 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
   margin-top: 20px;
 }
 
-.font_titulo {
-  font-family: 'Franklin Gothic Demi Cond';
-}
+
 
 /*CALLOUT PAGINA PRINCIPAL*/
 .callout {

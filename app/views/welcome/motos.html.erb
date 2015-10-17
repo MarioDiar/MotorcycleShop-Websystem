@@ -1,19 +1,29 @@
-<!-- Motorcycles page -->
 <div class="container-fluid">
     <div class="row">
-    <% @motorcycles.each do |moto|%>
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-        <div class="boxmoto centered">
-            <%= image_tag moto.image.url(:small) %>
-            <h4 class="text-left yellow"><%=moto.model%></h4> 
-            <h4 class="text-left yellow"><%=moto.price%></h4>
-            <p class="text-left white">
-              <%=moto.descriptionshort%>
-            </p>
-            <%= button_to 'Conoce más', moto_path(moto), :method => "get", class:"btnmoto be-yellow gray"%>
+        <div class="col-xs-12 col-sm-3 left_header">
         </div>
-      </div>
-    <%end%>
+        <div class="col-xs-12 col-sm-9 col-sm-offset-3 right_content">
+            <% @motorcycles.each do |moto|%>
+
+            <a href="<%=moto_path(moto)%>">
+                <div class="datos_moto">
+                    <div class="col-xs-12 col-sm-9">
+                        <p class="font_motomodel"><%= moto.model%></p>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="col-sm-3 hidden-xs text-center">
+                        <div class="thumbnail_container">
+                            <%= image_tag moto.image.url() %>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-9 resumen_articulo">
+                        <h3 class="titulo_articulo font_titulo"><%=moto.model%></h3>
+                        <p class="resumen_articulo"><%=moto.descriptionshort%></p>
+                    </div>
+                </div>
+            </a>
+            <%end%>
+        </div>
     </div>
 </div>
-<%= render "partials/footer"%>
