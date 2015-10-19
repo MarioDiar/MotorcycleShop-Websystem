@@ -1,25 +1,24 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-xs-12 col-sm-3 left_header">
+        <div class="hidden-xs hidden-sm col-md-3 left_header">
         </div>
-        <div class="col-xs-12 col-sm-9 col-sm-offset-3 right_content">
+        <div class="col-xs-12 col-sm-12 col-md-9 col-md-offset-3 right_content">
             <% @motorcycles.each do |moto|%>
-
-            <a href="<%=moto_path(moto)%>">
-                <div class="datos_moto">
-                    <div class="col-xs-12 col-sm-9">
-                        <p class="font_motomodel"><%= moto.model%></p>
-                    </div>
-                </div>
-                <div class="list">
-                    <div class="col-sm-3 hidden-xs text-center">
-                        <div class="thumbnail_container">
-                            <%= image_tag moto.image.url() %>
+            <a id="motolink" href="<%=moto_path(moto)%>">
+                <div class="list-motos">
+                    <div class="col-xs-5 text-center">
+                        <div class="motodata_container">
+                            <h3 class="modelo_moto"><%=moto.model%></h3>
+                            <p class="resumen_moto"><%=moto.descriptionshort%></p>
+                            
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-9 resumen_articulo">
-                        <h3 class="titulo_articulo font_titulo"><%=moto.model%></h3>
-                        <p class="resumen_articulo"><%=moto.descriptionshort%></p>
+                    <div class="col-xs-7 no-padding">
+                        <div class="textofotomoto_container">
+                            <h3>Conocer mas</h3>
+                        </div>
+                        <div class="motoimg_container" style="background:url(<%= moto.image.url() %>);">
+                        </div>
                     </div>
                 </div>
             </a>

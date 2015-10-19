@@ -3,7 +3,7 @@
 
 /*FONTS*/
 @font-face {
-font-family: 'Franklin Gothic Demi Cond';
+font-family: 'Franklin Gothic';
 font-style: normal;
 font-weight: normal;
 src: local('Franklin Gothic Demi Cond'), url('Franklin Gothic Demi Cond Regular.woff') format('woff');
@@ -283,7 +283,7 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
 .footer {
     height: 300px;
     overflow: auto;
-    padding-top: 0px;
+    padding-top: 0px; 
     text-align: center;
     background: #f4f4f4;
 }
@@ -294,6 +294,10 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
 
 .center {
   text-align: center;
+}
+
+.no-padding {
+  padding: 0px;
 }
 
 .social {
@@ -348,6 +352,41 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
   width: 150px;
 }
 
+.motoimg_container {
+  height: 250px;
+  width: 100%;
+  display: table;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.textofotomoto_container {
+  position: absolute;
+  height: 250px;
+  width: 100%;
+  display: table;
+}
+
+.textofotomoto_container >h3{
+  font-family: 'Franklin Gothic';
+  margin: 0px !important;
+  color: #12539f;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+#motolink:hover .motoimg_container {
+  opacity: .1;
+}
+
+#motolink:hover .textofotomoto_container >h3 {
+  visibility: visible;
+}
+
 /*@media(min-width: 768px) {
   .thumbnail_container {
     margin-left: 40px;
@@ -379,6 +418,19 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
   border-bottom-style: solid;
 }
 
+.motodata_container {
+  padding: 10px;
+}
+
+.list-motos {
+  background: #f6f6f6;
+  height: 250px;
+  width: 100%;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #e5e5e5;
+}
+
 .datos_moto {
   height: 100px;
   width: 100%;
@@ -395,27 +447,34 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
   background: white;
 }
 
-/*NOTICIA Y ARTICULO*/
+/*NOTICIA Y ARTICULO y LISTA MOTOS*/
 
 .titulo_articulo {
   margin-top: 20px;
   position: relative;
-}
-
-.font_titulo {
-  font-family: 'Franklin Gothic Demi Cond';
+  font-family: 'Franklin Gothic';
   font-size: 40px;
 }
-
 
 .resumen_articulo {
   position: relative;
   margin-top: 20px;
-}
-
-.resumen_articulo >p {
   font-family: 'Helvetica Neue';
   font-size: 20px;
+}
+
+.modelo_moto {
+  font-family: 'Franklin Gothic';
+  font-size: 60px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.resumen_moto {
+  margin-top: 20px;
+  position: relative;
+  font-family: 'Helvetica Neue';
+  font-size: 24px;
 }
 
 .cuerpo_noticia >p {
@@ -426,7 +485,7 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
 }
 
 .cuerpo_noticia >h1 {
-  font-family: 'Franklin Gothic Demi Cond';
+  font-family: 'Franklin Gothic';
   font-size: 36px;
 }
 
