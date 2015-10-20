@@ -278,6 +278,18 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
   color: #444;
 }
 
+/*NOTICIAS Y MOTOS INDEX PAGE*/
+.noticia_callout_container {
+  height: 300px;
+  width: 100%;
+  background-color: red;
+}
+
+.motos_callout_container {
+  height: 300px;
+  width: 100%;
+  background-color: yellow;
+}
 
 /*SECTIONS*/
 .footer {
@@ -361,7 +373,7 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
   -o-background-size: cover;
   background-size: cover;
 }
-
+  
 .textofotomoto_container {
   position: absolute;
   height: 250px;
@@ -371,6 +383,7 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
 
 .textofotomoto_container >h3{
   font-family: 'Franklin Gothic';
+  font-size: 40px;
   margin: 0px !important;
   color: #12539f;
   text-align: center;
