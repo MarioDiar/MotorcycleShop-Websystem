@@ -281,14 +281,21 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
 /*NOTICIAS Y MOTOS INDEX PAGE*/
 .noticia_callout_container {
   height: 300px;
-  width: 100%;
-  background-color: red;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+
 }
 
 .motos_callout_container {
   height: 300px;
-  width: 100%;
-  background-color: yellow;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
 }
 
 /*SECTIONS*/
@@ -365,6 +372,7 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
 }
 
 .motoimg_container {
+  background-position: center top;
   height: 250px;
   width: 100%;
   display: table;
@@ -460,6 +468,66 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
   background: white;
 }
 
+/*CALLOUT PAGINA PRINCIPAL*/
+.callout_wrap {
+  padding: 0px;
+  margin-bottom: 10px;
+}
+
+.callout_wrap >a {
+  color: inherit;
+}
+
+.callout_container {
+  background: #f6f6f6;
+  height: 250px;
+  width: 100%;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #e5e5e5;
+}
+
+.calloutdata_container {
+  padding: 10px;
+}
+
+.textoimgcallout_container {
+  position: absolute;
+  height: 250px;
+  width: 100%;
+  display: table;
+}
+
+.textoimgcallout_container >h3{
+  font-family: 'Franklin Gothic';
+  font-size: 40px;
+  margin: 0px !important;
+  color: #12539f;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+#calloutlink:hover .calloutimg_container {
+  opacity: .1;
+}
+
+#calloutlink:hover .textoimgcallout_container >h3 {
+  visibility: visible;
+}
+
+.calloutimg_container {
+  background-position: center top;
+  height: 250px;
+  width: 100%;
+  display: table;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 /*NOTICIA Y ARTICULO y LISTA MOTOS*/
 
 .titulo_articulo {
@@ -509,7 +577,7 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
 
 
 
-/*CALLOUT PAGINA PRINCIPAL*/
+/*CALLOUT VIEJO*/
 .callout {
   color: #ffffff;
   display: table;
@@ -978,13 +1046,13 @@ Slider
 }
 @media only screen and (min-width: 768px) {
   .cd-hero-slider {
-    height: 530px;
+    height: 500px;
   }
 }
 @media only screen and (min-width: 1170px) {
-  /*.cd-hero-slider {
-    height: 500px;
-  } */
+  .cd-hero-slider {
+    height: 530px;
+  } 
   .cd-hero-slider li {
     background-position: center top !important;
   }
