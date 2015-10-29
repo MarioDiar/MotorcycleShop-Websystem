@@ -2,6 +2,7 @@
 @import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
 
 /*FONTS*/
+
 @font-face {
 font-family: 'Franklin Gothic';
 font-style: normal;
@@ -53,7 +54,7 @@ ul {
 
 hr { 
   display: block; height: 1px;
-  border: 0; border-top: 1px solid #FCD68A;
+  border: 0; border-top: 1px solid #12539f;
   margin: 1em 0; padding: 0; 
 }
 
@@ -169,15 +170,12 @@ a,a:visited{
   margin-bottom: 7px;
 }
 
-/* FOOTER */
-
-
 /*NAVBAR BAJAJ*/
 
 .navbar-bajaj {
-  background-color: #FCD68A;
-  /*border-bottom:solid 1px;
-  border-color: #2567B2;*/ 
+  background-color: #f6f6f6;
+  border-bottom:solid 1px;
+  border-color: #12539f;
   margin-bottom: none;
 }
 .navbar-bajaj .navbar-brand {
@@ -197,13 +195,13 @@ a,a:visited{
 
 .navbar-bajaj .navbar-nav > li {
   border-left: solid 1px;
-  border-color: #3B3B3B; 
+  border-color: #12539f; 
 }
 
 #lastlink {
-  color: #FCD68A !important;
+  color: white !important;
   margin-right: 15px;
-  background-color: #3B3B3B;
+  background-color: #12539f;
 }
 
 .navbar-bajaj .navbar-nav > li > a {
@@ -484,17 +482,31 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
   background: white;
 }
 
+/*FOOTER SECTION*/
+.footer_outer_section {
+  height: 400px;
+  background-color: #000000;
+}
+
+.footer_inner_section {
+  height: 400px;
+  background-color: red;
+}
+.foot_element_container {
+
+}
+
 /*CALLOUT PAGINA PRINCIPAL*/
 .callout_section {
-  height: 280px;
+  height: 310px;
 }
 
 .callout_one {
-  background-color: gray;
+  background-color: #f6f6f6;
 }
 
 .callout_two {
-  background-color: red;
+  background-color: #000000;
 }
 
 .callout_wrap {
@@ -513,7 +525,7 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #e5e5e5;
-  margin-top: 15px;
+  margin-top: 30px;
 }
 
 .callout_container_two {
