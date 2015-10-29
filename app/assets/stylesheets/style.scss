@@ -18,12 +18,32 @@ src: local('Helvetica Neue LT Std 45 Light'), url('HelveticaNeueLTStd Lt.woff') 
 }
 
 /*TESTING TESTING*/
+a {
+  margin: 0;
+  padding: 0;
+}
 .botonprueba {
   background-color: black;
   opacity: .5;
   width: 300px;
 }
-
+.inline-test {
+  display: block;
+  padding: 0;
+  font-size: 0;
+}
+.bottom-nav {
+  width: 20%;
+  height: 20px;
+  background-color: red;
+  display: inline-block;
+}
+.inline-test > a{
+  position: relative;
+  background-color: #f6f6f6;
+  width: 19%; 
+  display: inline-block;
+}
 /*TESTING TESTING*/
 
 .font_grande {
@@ -485,12 +505,13 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
 /*FOOTER SECTION*/
 .footer_outer_section {
   height: 400px;
-  background-color: #000000;
+  background-color: #f6f6f6;
 }
 
 .footer_inner_section {
+  padding: 0;
   height: 400px;
-  background-color: red;
+  background: image-url(tresPulsars) no-repeat center bottom; 
 }
 .foot_element_container {
 
@@ -502,11 +523,11 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
 }
 
 .callout_one {
-  background-color: #f6f6f6;
+  background-color: #3B3B3B;
 }
 
 .callout_two {
-  background-color: #000000;
+  background-color: #f6f6f6;
 }
 
 .callout_wrap {
