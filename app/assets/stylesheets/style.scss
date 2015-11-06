@@ -159,6 +159,10 @@ a {
   content: url(frontpulsar);
 }
 
+.img_tecnologia {
+  content: url(pulsarTecnologia);
+}
+
 .video_player {
   width: 100%;
   top: 100px;
@@ -691,7 +695,7 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
 }
 
 .callout_one {
-  background-color: white;
+  background-color: black;
 }
 
 .callout_two {
@@ -700,8 +704,14 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
 }
 
 .callout_three {
-  background-color: black;
+  background-color: white;
   text-align: center;
+}
+
+.callout_spacing {
+  background-color: white;
+  height: 20px;
+  width: 100%;
 }
 
 .callout_wrap {
@@ -805,7 +815,7 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
 }
 
 .modelo_moto {
-  color: black;
+  color: white;
   font-family: 'Franklin Gothic';
   font-size: 50px;
   margin-top: 20px;
@@ -813,7 +823,7 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
 }
 
 .resumen_moto {
-  color: black;
+  color: white;
   margin-top: 20px;
   position: relative;
   font-family: 'Helvetica Neue';
