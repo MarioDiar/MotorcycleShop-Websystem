@@ -64,6 +64,30 @@ a {
   transition: background-color 0.4s linear;
 }
 
+@media (max-width: 1178px) {
+  .bottom-nav {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 767px) {
+  .bottom-nav {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 580px) {
+  .bottom-nav {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 300px) {
+  .bottom-nav {
+    font-size: 15px;
+  }
+}
+
 .bottom-nav:hover {
   background-color: transparent;
   color: white;
@@ -168,7 +192,7 @@ a {
 }
 
 .img_tecnologia {
-  content: url(pulsarTecnologia);
+  content: url(pulsarTecnologiaMed);
 }
 
 .video_player {
