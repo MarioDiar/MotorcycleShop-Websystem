@@ -75,6 +75,6 @@ class MotorcyclesController < ApplicationController
 
     #defining the parameters neccesary for the motorcycle
     def motorcycle_params
-      params.require(:motorcycle).permit(:model, :image, :imagetwo, :imagethree, :descriptionshort, :descriptionbig, :price)
+      params.require(:motorcycle).permit(:model, :pdf, :image, :imagetwo, :imagethree, :descriptionshort, :descriptionbig, :price)
     end
 end
