@@ -1,3 +1,36 @@
+// function for fading out the loader
+function loader() {
+	$(".preloader_container").fadeOut("slow");
+}
+// setting a little timeout for fading the loader out
+$(document).on('ready page:load', function(event) {
+	setTimeout(loader, 1250);
+});
+
+// fancybox customization
+$(document).ready(function() {
+	$(".videobox").fancybox({
+		maxWidth	: 800,
+		maxHeight	: 600,
+		padding		:0,
+		fitToView	: false,
+		width		: '70%',
+		height		: '70%',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none',
+		helpers : {
+        	overlay : {
+            	css : {
+                	'background' : 'rgba(0, 0, 0, 0.90)'
+            	}
+        	}
+    	}
+	});
+});
+
+// slider script
 jQuery(document).ready(function($){
 	var slidesWrapper = $('.cd-hero-slider');
 

@@ -18,6 +18,10 @@
 }
 
 /*TESTING TESTING*/
+
+.white-color {
+  color: white !important;
+}
 .text_center {
   text-align: center;
 }
@@ -248,6 +252,20 @@ a {
 
 /*VIDEO PLAYER*/
 
+/*LOADER*/
+
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.preloader_container {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(preloader.gif) center no-repeat #fff;
+}
+
 /*TESTING TESTING*/
 
 .font_grande {
@@ -263,7 +281,7 @@ html,body {
     width: 100%;
     height: 100%;
     font-family: 'Lato', sans-serif;
-    background-color: #f4f4f4;
+    background-color: white;
     padding-top: 25px;
 }
 
@@ -293,6 +311,9 @@ hr {
 }
 
 /*ADMIN CSS*/
+.be-blue {
+  background-color: #12539f !important;
+}
 
 .be-yellow {
   background-color: #FCD68A !important;
@@ -302,7 +323,7 @@ hr {
   color: #FCD68A !important;
 }
 .white {
-  color: white;
+  color: white !important;
 }
 
 .gray {
@@ -610,14 +631,10 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
 }
 
 .motoimg_container {
-  background-position: center top;
+  background-position: center center;
   height: 250px;
   width: 100%;
   display: table;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
   
 .textofotomoto_container {
@@ -839,7 +856,7 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
 }
 
 .modelo_moto {
-  color: white;
+  color: black;
   font-family: 'Franklin Gothic';
   font-size: 50px;
   margin-top: 20px;
@@ -847,7 +864,7 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
 }
 
 .resumen_moto {
-  color: white;
+  color: black;
   margin-top: 20px;
   position: relative;
   font-family: 'Helvetica Neue';
@@ -1374,19 +1391,19 @@ Single slide style
 }
 .cd-hero-slider li:first-of-type {
   background-color: #2c343b;
-  background-image: url(bajajRS);
+  background-image: url(banners/pulsarnsBanner);
 }
 .cd-hero-slider li:nth-of-type(2) {
   background-color: #3d4952;
-  background-image: url(bajajRS);
+  background-image: url(banners/discoverBanner);
 }
 .cd-hero-slider li:nth-of-type(3) {
   background-color: #586775;
-  background-image: url(bajajRS);
+  background-image: url(banners/pulsar200Banner);
 }
 .cd-hero-slider li:nth-of-type(4) {
   background-color: #2c343b;
-  background-image: url(bajajRS);
+  background-image: url(banners/boxerBanner);
 }
 
 .cd-hero-slider .cd-full-width,
@@ -1724,16 +1741,17 @@ Slider navigation
   float: left;
 }
 .cd-slider-nav li.selected a {
-  color: #2c343b;
+  color: #cc0000;
 }
 .no-touch .cd-slider-nav li.selected a:hover {
   background-color: transparent;
 }
 .cd-slider-nav a {
+  text-decoration: none !important;
   display: block;
   position: relative;
-  padding-top: 35px;
-  font-size: 1rem;
+  padding-top: 13px !important;
+  font-size: 40px !important;
   font-weight: 700;
   color: #a8b4be;
   -webkit-transition: background-color 0.2s;
