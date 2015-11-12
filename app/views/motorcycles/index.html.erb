@@ -7,10 +7,10 @@
         <table id="mytable" class="table table-bordred table-striped">
          <thead>
            <th>Modelo</th>
-           <th>Desc. chica</th>
+           <th>Resumen</th>
            <th>Descripción</th>
            <th>Precio</th>
-           <th>PDF</th>
+           <th>PDF status</th>
          </thead>
          <tbody>
           <% @motorcycles.each do |motorcycle| %>
@@ -21,9 +21,9 @@
             <td><%= motorcycle.price %></td>
             <!-- checking if a pdf was uploaded -->
             <% if motorcycle.pdf.to_s == "/pdfs/original/missing.png" %>
-              <td><div class="btn btn-danger btn-xs">No hay PDF</div></td>
+              <td><div class="btn btn-danger btn-xs">No PDF</div></td>
             <% else %>
-              <td><a href="<%=motorcycle.pdf%>"><div class="btn btn-success btn-xs">Ver PDF</div></a></td>
+              <td><a href="<%=motorcycle.pdf%>" target="_blank"><div class="btn btn-success btn-xs" >Ver PDF</div></a></td>
             <%end%>
             <td><%= button_to 'Editar', edit_motorcycle_path(motorcycle), :method => "get", class:"btn btn-primary btn-xs"%></td>
             <td><%= button_to 'Ver', motorcycle_path(motorcycle), :method => "get", class:"btn btn-success btn-xs"%></td>

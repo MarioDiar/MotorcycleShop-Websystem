@@ -310,6 +310,29 @@ hr {
   width: 100%;
 }
 
+/*BUTTONS*/
+.btnadmin {
+  background-color: inherit;
+  margin-top: 8px;
+  border:none;
+  outline: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 10px 12px;
+  font-size: 1.2em;
+}
+
+.btnadminchico {
+  background-color: inherit;
+  margin-top: 8px;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 8px 10px;
+  font-size: .8em;
+}
+
 /*ADMIN CSS*/
 .be-blue {
   background-color: #12539f !important;
@@ -348,17 +371,6 @@ hr {
   width: 100%;
   display: block;
   padding: 10px 0px;
-  font-size: 1.2em;
-}
-
-.btnadmin {
-  background-color: inherit;
-  margin-top: 8px;
-  border:none;
-  outline: none;
-  text-transform: uppercase;
-  cursor: pointer;
-  padding: 10px 12px;
   font-size: 1.2em;
 }
 
