@@ -10,15 +10,8 @@ $(document).on('ready page:load', function(event) {
 // fancybox customization
 $(document).ready(function() {
 	$(".videobox").fancybox({
-		maxWidth	: 800,
-		maxHeight	: 600,
-		padding		:0,
-		fitToView	: false,
-		width		: '70%',
-		height		: '70%',
-		autoSize	: false,
-		closeClick	: false,
 		openEffect	: 'none',
+		padding		:      0,
 		closeEffect	: 'none',
 		helpers : {
         	overlay : {
@@ -29,6 +22,15 @@ $(document).ready(function() {
     	}
 	});
 });
+
+// maxWidth	: 800,
+// 		maxHeight	: 600,
+// 		padding		:0,
+// 		fitToView	: false,
+// 		width		: '70%',
+// 		height		: '70%',
+// 		autoSize	: false,
+// 		closeClick	: false,
 
 // slider script
 jQuery(document).ready(function($){
