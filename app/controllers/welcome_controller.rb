@@ -1,8 +1,6 @@
 class WelcomeController < ApplicationController
 	#call the private methods before any action
 	# layout 'dashboard', :only => [:motos]
-	# before_action :getAddresses
-	# before_action :getMotorcycles
 
 	#index
 	def index
@@ -36,6 +34,7 @@ class WelcomeController < ApplicationController
 	
 	#motos
 	def motos
+		@motorcycles = Motorcycle.all
 	end
 
 	#noticias
@@ -50,13 +49,6 @@ class WelcomeController < ApplicationController
 
 	#private methods
 	private
-
-	#get the data of all the motorcycles
-	def getMotorcycles
-		@motorcycles = Motorcycle.all
-	end
-
-
 
 	#get the addresses of the branches
 	def getAddresses
