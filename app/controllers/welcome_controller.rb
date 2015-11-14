@@ -1,8 +1,8 @@
 class WelcomeController < ApplicationController
 	#call the private methods before any action
 	# layout 'dashboard', :only => [:motos]
-	before_action :getAddresses
-	before_action :getMotorcycles
+	# before_action :getAddresses
+	# before_action :getMotorcycles
 
 	#index
 	def index
