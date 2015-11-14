@@ -16,6 +16,8 @@ gem 'rails', '4.2.0'
 # Use postgres as the database for Active Record
 # gem 'postgresql'
 gem 'pg'
+#using puma as server
+gem 'puma'
 # clean html NOTE: need to install nokogiri
 gem 'sanitize'
 #aws sdk
