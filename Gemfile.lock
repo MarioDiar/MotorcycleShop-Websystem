@@ -71,6 +71,8 @@ GEM
       railties (>= 3.2, < 5.0)
     erubis (2.7.0)
     execjs (2.6.0)
+    fancybox2-rails (0.2.8)
+      railties (>= 3.1.0, < 5.0)
     foreigner (1.7.4)
       activerecord (>= 3.0.0)
     globalid (0.3.6)
@@ -189,6 +191,7 @@ DEPENDENCIES
   coffee-script-source (= 1.8.0)
   devise
   epic-editor-rails
+  fancybox2-rails (~> 0.2.8)
   foreigner
   jbuilder (~> 2.0)
   jquery-rails

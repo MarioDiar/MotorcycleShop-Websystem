@@ -7,6 +7,8 @@ gem 'jquery-rails'
 gem 'devise'
 # markup editor gem
 gem 'epic-editor-rails'
+# fancybox
+gem 'fancybox2-rails', '~> 0.2.8'
 #Paperclip - subir imagenes
 gem 'paperclip'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
