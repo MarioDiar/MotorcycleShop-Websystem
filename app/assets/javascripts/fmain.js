@@ -7,6 +7,22 @@ $(document).on('ready page:load', function(event) {
 	setTimeout(loader, 1250);
 });
 
+// fancybox customization
+$(document).ready(function() {
+	$(".videobox").fancybox({
+		openEffect	: 'none',
+		padding		:      0,
+		closeEffect	: 'none',
+		helpers : {
+        	overlay : {
+            	css : {
+                	'background' : 'rgba(0, 0, 0, 0.90)'
+            	}
+        	}
+    	}
+	});
+});
+
 // slider script
 jQuery(document).ready(function($){
 	var slidesWrapper = $('.cd-hero-slider');
