@@ -1,3 +1,27 @@
+// fancybox customization
+$(document).ready(function() {
+	$(".videobox").fancybox({
+		openEffect	: 'none',
+		padding		:      0,
+		closeEffect	: 'none',
+		helpers : {
+        	overlay : {
+            	css : {
+                	'background' : 'rgba(0, 0, 0, 0.90)'
+            	}
+        	}
+    	}
+	});
+});
+
+// maxWidth	: 800,
+// 		maxHeight	: 600,
+// 		padding		:0,
+// 		fitToView	: false,
+// 		width		: '70%',
+// 		height		: '70%',
+// 		autoSize	: false,
+// 		closeClick	: false,
  /*!
  * Buttons helper for fancyBox
  * version: 1.0.5 (Mon, 15 Oct 2012)

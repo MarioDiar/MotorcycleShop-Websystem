@@ -7,31 +7,6 @@ $(document).on('ready page:load', function(event) {
 	setTimeout(loader, 1250);
 });
 
-// fancybox customization
-$(document).ready(function() {
-	$(".videobox").fancybox({
-		openEffect	: 'none',
-		padding		:      0,
-		closeEffect	: 'none',
-		helpers : {
-        	overlay : {
-            	css : {
-                	'background' : 'rgba(0, 0, 0, 0.90)'
-            	}
-        	}
-    	}
-	});
-});
-
-// maxWidth	: 800,
-// 		maxHeight	: 600,
-// 		padding		:0,
-// 		fitToView	: false,
-// 		width		: '70%',
-// 		height		: '70%',
-// 		autoSize	: false,
-// 		closeClick	: false,
-
 // slider script
 jQuery(document).ready(function($){
 	var slidesWrapper = $('.cd-hero-slider');
