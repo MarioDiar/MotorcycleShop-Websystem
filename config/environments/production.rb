@@ -51,7 +51,7 @@ Rails.application.configure do
 
   config.assets.precompile += %w( '.woff', '.eot', '.svg', '.ttf' )
 
-  config.action_mailer.default_url_options = { :host => 'powerful-gorge-1157.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'agile-anchorage-3113.herokuapp.com/' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
@@ -59,9 +59,9 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     :address              => "smtp.gmail.com",
     :port                 => 587,
-    :domain               => 'powerful-gorge-1157.herokuapp.com',
+    :domain               => 'agile-anchorage-3113.herokuapp.com/',
     :user_name            => 'mariodiar@gmail.com',
-    :password             => ENV['MAIL_PASSWORD'],
+    :password             => ENV['MAIL_PASS'],
     :authentication       => 'plain',
     :enable_starttls_auto => true  
   }
@@ -69,7 +69,7 @@ Rails.application.configure do
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
-      :bucket => ENV['BAJAJ_BUCKET_NAME'],
+      :bucket => ENV['BAJAJCOLIMA_BUCKETNAME'],
       :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     },
