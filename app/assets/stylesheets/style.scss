@@ -135,6 +135,9 @@ a {
   background-color: rgba(0,0,0,1);
 }
 
+.twitter_link {
+}
+
 .facebook_link {
   margin-left: 10%;
 }
@@ -631,10 +634,23 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
 
 /*LEFT HEADER*/
 
+.leftbackground_yellow {
+  background: image-url(ns200gray2) center top no-repeat;
+}
+
+@media(max-width: 767px) {
+  .leftbackground_yellow {
+    background: image-url(ns200grayHor) center center no-repeat;
+  }
+}
+
+.leftbackground_dark {
+  background: image-url(pulsarrs200gray2) center center no-repeat;
+}
+
 .left_header {
   padding: 0px;
   color: #fff;
-  background: image-url(ns200grayvertical);
   height: 100px;
   position: relative;
 }
