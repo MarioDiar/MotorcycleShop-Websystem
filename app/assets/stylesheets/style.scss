@@ -192,12 +192,22 @@ a {
 }
 
 /*VIDEO PLAYER*/
-.img_videocallout {
+/*.img_videocallout {
   content: url(frontpulsar);
+}*/
+
+.img_videocallout {
+  height: 272px;
+  background: url(frontpulsar) center center no-repeat;
 }
 
-.img_tecnologia {
+/*.img_tecnologia {
   content: url(pulsarTecnologiaMed);
+}*/
+
+.img_tecnologia {
+  height: 609px;
+  background: url(pulsarTecnologiaMed) center center no-repeat;
 }
 
 .video_player {
