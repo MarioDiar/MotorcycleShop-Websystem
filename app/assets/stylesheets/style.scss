@@ -129,7 +129,7 @@ a {
 .socialfooter_link {
   width: auto;
   display: inline-block;
-  padding: 16px;
+  padding: 14px;
   font-size: 17px;
   color: white !important;
   background-color: rgba(0,0,0,1);
@@ -137,6 +137,15 @@ a {
 
 .facebook_link {
   margin-left: 10%;
+}
+
+@media(max-width: 878px) {
+  .facebook_link {
+    margin-left: 3% !important;
+  }
+  .socialfooter_link >p {
+    font-size: 14px !important;
+  }
 }
 
 .socialfooter_link >p {
@@ -155,7 +164,6 @@ a {
 }
 
 .footerlabel_container {
-  background-color: rgba(0,0,0,0.5);
   width: 63%;
 }
 
@@ -209,6 +217,14 @@ a {
   height: 609px;
   background: url(pulsarTecnologiaMed) center center no-repeat;
 }
+
+@media (max-width: 767px) {
+  .img_tecnologia {
+    height: 503px !important;
+    background: url(pulsarTecnologiaChico) center center no-repeat !important;
+  }
+}
+
 
 .video_player {
   width: 100%;
@@ -762,8 +778,7 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
   padding: 20px;
 }
 
-.footerlabel_container {
-  background-color: rgba(0,0,0,0.5);
+.footerlabel_container_small {
   width: 90%;
 }
 
@@ -791,7 +806,7 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
 .footer_inner_section {
   padding: 0;
   height: 400px;
-  background: image-url(tresPulsars) no-repeat center bottom; 
+  background: image-url(tresPulsarsDark) no-repeat center bottom; 
 }
 .foot_element_container {
 
