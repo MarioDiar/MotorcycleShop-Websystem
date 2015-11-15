@@ -4,6 +4,7 @@ class WelcomeController < ApplicationController
 
 	#index
 	def index
+		@noticia = Article.published.last
 	end
 
 	def show
@@ -39,7 +40,7 @@ class WelcomeController < ApplicationController
 
 	#noticias
 	def noticias
-		@noticias = Article.publicados.ultimos
+		@noticias = Article.published.lasts
 	end
 
 	#contact
@@ -50,19 +51,4 @@ class WelcomeController < ApplicationController
 	#private methods
 	private
 
-	#get the addresses of the branches
-	def getAddresses
-		@addresses = []
-		branches = Branch.all
-		counter = 0
-
-		#saving the address of each branch to be able to look it up in the main page
-		branches.each do |branch|
-			address = branch.street + "," + branch.postalCode + "," + branch.city + "," + branch.state
-			@addresses[counter] = address
-			@addresses[counter].gsub!(/\s/,'')
-			counter += 1
-		end
-
-	end
 end

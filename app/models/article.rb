@@ -22,8 +22,8 @@ class Article < ActiveRecord::Base
 	# scope :published, -> { where(state: "published") }
 
 	# adding the states & scopes for articles
-	scope :ultimos, -> { order("created_at DESC").limit(10) }
-	scope :publicados, -> { where(state: "published") }
+	scope :lasts, -> { order("created_at DESC").limit(10) }
+	scope :published, -> { where(state: "published") }
 
 	aasm column: "state" do
 		state :in_draft, initial: true
