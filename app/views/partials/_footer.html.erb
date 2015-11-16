@@ -12,16 +12,13 @@
             <!-- small subscribe -->
             <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
                 <div class="subscribe_container_small">
-                    <form>
-                        <div class="footerlabel_container_small">
-                            <label for="emailinput" class="textform_footer">Suscríbete a nuesto correo.
+                    <div class="footerlabel_container_small">
+                        <label for="emailinput" class="textform_footer">Suscríbete a nuesto correo.
                             <br>
                             Te harémos llegar promociones y noticias en cuanto salgan.
-                            </label>
-                        </div>
-                        <input type="text" id="emailinput" value="" name="EMAIL" class="emailform_footer" placeholder="Email Address">
-                        <input type="submit" value="Guardar" name="subscribe" class="submit_footer">
-                    </form>
+                        </label>
+                        <%= render 'subscribers/form'%>
+                    </div>
                 </div>
             </div>
             <!-- small social -->
@@ -35,16 +32,13 @@
             <!-- First row of footer -->
             <div class="hidden-xs col-sm-12 footer_first">
                 <div class="subscribe_container">
-                    <form>
-                        <div class="footerlabel_container">
-                            <label for="emailinput" class="textform_footer">Suscríbete a nuesto correo.
+                    <div class="footerlabel_container">
+                        <label for="emailinput" class="textform_footer">Suscríbete a nuesto correo.
                             <br>
                             Te harémos llegar promociones y noticias en cuanto salgan.
-                            </label>
-                        </div>
-                        <input type="text" id="emailinput" value="" name="EMAIL" class="emailform_footer" placeholder="Email Address">
-                        <input type="submit" value="Guardar" name="subscribe" class="submit_footer">
-                    </form>
+                        </label>
+                        <%= render 'subscribers/form'%>
+                    </div>
                 </div>
                 <div class="socialfooter_container">
                     <a href="https://twitter.com/bajajmx" target="_blank" class="socialfooter_link twitter_link"><i class="fa fa-twitter fa-2x"></i><p>Twitter</p></a>

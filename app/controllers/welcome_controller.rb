@@ -5,6 +5,7 @@ class WelcomeController < ApplicationController
 	#index
 	def index
 		@noticia = Article.published.last
+		@subscriber = Subscriber.new
 	end
 
 	def show
@@ -17,6 +18,7 @@ class WelcomeController < ApplicationController
 
 	#Method to display each branch in the googles map of the main page
 	def agencias
+		@subscriber = Subscriber.new
 		@branches = Branch.all
 		map = 'https://maps.google.com.mx/maps?f=q&source=s_q&hl=en&geocode=&q='
 		
@@ -46,6 +48,7 @@ class WelcomeController < ApplicationController
 	#contact
 	def contacto
 		@contact = Contact.new
+		@subscriber = Subscriber.new
 	end
 
 	#private methods
