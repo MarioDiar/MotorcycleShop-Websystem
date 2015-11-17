@@ -9,7 +9,7 @@
 .DS_Store
 # Ignore mailer config
 /config/environments/development.rb
-
+.env
 #Ignoring mailchimp initializer
 /config/initializers/gibbon.rb
 
