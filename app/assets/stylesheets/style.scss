@@ -683,6 +683,7 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
 .thumbnail_container {
   width: 130px;
   height: 130px;
+  display: block;
   margin-left: 15px;
   margin-top: 33px;
   overflow: hidden;
@@ -690,6 +691,9 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
   border-style: solid;
   border-width: 2px;*/
   -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
 .thumbnail_container >img {
@@ -931,10 +935,8 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
   background: #E6E7ED;
   -moz-border-radius: 125px;
   -webkit-border-radius: 125px;
-  background-image: url(bajajlogonew);
   background-position:50% 50%;
   background-repeat:no-repeat; 
-
 }
 
 .calloutimg_container >img {

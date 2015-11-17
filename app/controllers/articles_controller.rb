@@ -69,12 +69,12 @@ class ArticlesController < ApplicationController
   # method to publish the article
   def publish
     @article.publish!
-    redirect_to @article
+    redirect_to "/noticias"
   end
   # method to unpublish the article
   def unpublish
     @article.unpublish!
-    redirect_to @article
+    redirect_to "/noticias"
   end
 
   private
