@@ -14,6 +14,7 @@ class WelcomeController < ApplicationController
 
 	def show
 		@motorcycle = Motorcycle.find(params[:id])
+		@subscriber = Subscriber.new
 	end
 
 	def noticia

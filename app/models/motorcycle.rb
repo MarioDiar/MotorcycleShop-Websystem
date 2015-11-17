@@ -8,9 +8,10 @@ class Motorcycle < ActiveRecord::Base
 
 
 	#attached images to motorcycle, setting the sizes
-	has_attached_file :image, styles: {small: "300x300",medium: "800x400"}
-	has_attached_file :imagetwo, styles: {small: "300x300",medium: "800x400"}
-	has_attached_file :imagethree, styles: {small: "300x300",medium: "800x400"}
+	has_attached_file :image, styles: {normal: "675x507"}
+	has_attached_file :imagetwo
+	has_attached_file :imagethree
+	# 900x676
 
 	validates_attachment_presence :image
 
