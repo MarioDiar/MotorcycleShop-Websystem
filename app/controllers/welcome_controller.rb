@@ -8,6 +8,10 @@ class WelcomeController < ApplicationController
 		@subscriber = Subscriber.new
 	end
 
+	def gracias
+		
+	end
+
 	def show
 		@motorcycle = Motorcycle.find(params[:id])
 	end

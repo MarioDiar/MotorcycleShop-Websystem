@@ -34,6 +34,8 @@ Rails.application.routes.draw do
   get "/moto/:id", to: "welcome#show", as: "moto"
   # route to show each article
   get "/noticia/:id", to: "welcome#noticia", as: "noticia"
+  # route to show thanks after subscribing to newsletter
+  get "/gracias", to: "welcome#gracias"
 
 
   #CRUD ROUTES of models
