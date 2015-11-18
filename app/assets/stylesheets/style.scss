@@ -980,7 +980,16 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
   margin-top: 30px;
   margin-bottom: 40px;
   font-family: 'Helvetica Neue';
-  font-size: 18px;
+  font-size: 19px;
+}
+
+.cuerpo_noticia >p >a {
+  color: #337ab7 !important;
+  text-decoration: none;
+}
+
+.cuerpo_noticia >p >a:hover {
+  background-color: inherit;
 }
 
 .cuerpo_noticia >h1 {
@@ -988,12 +997,10 @@ fieldset[disabled] .navbar-bajaj .btn-link:focus {
   font-size: 36px;
 }
 
-.cuerpo_noticia >img {
-  max-width: 550px;
+.cuerpo_noticia >p >img {
+  max-width: 450px;
   margin-top: 20px;
 }
-
-
 
 /*CALLOUT VIEJO*/
 .callout {
